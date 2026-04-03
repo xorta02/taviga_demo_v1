@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, ArrowRight, Settings } from "lucide-react";
-import tavigaLogo from "../assets/taviga-logo.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,17 +11,8 @@ export default function Footer() {
           
           {/* Brand Column */}
           <div className="lg:col-span-4">
-            <Link to="/" className="flex items-center gap-2 mb-6 group inline-flex bg-white p-2 rounded-sm relative">
-              <img 
-                src={tavigaLogo} 
-                alt="Taviga Representaciones Industriales" 
-                className="h-10 w-auto object-contain"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
-                  (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
-                }}
-              />
-              <span className="hidden text-xl font-bold text-taviga-blue tracking-tight px-2">TAVIGA</span>
+            <Link to="/" className="flex items-center gap-2 mb-6 group inline-flex bg-white p-2 rounded-sm">
+              <img src="/image (2).png" alt="Taviga Representaciones Industriales" className="h-10 w-auto object-contain" />
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed mb-4 max-w-sm">
               Socio estratégico para la industria en México. Integramos tecnología de clase mundial, ingeniería y soporte comercial para proyectos de alto impacto.

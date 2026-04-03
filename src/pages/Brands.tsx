@@ -17,25 +17,11 @@ interface Brand {
   applications: string[];
 }
 
-const brandLogos: Record<string, string> = {
-  "Triveni Turbines": "/triveni.png",
-  "Triveni Gears": "/triveni_gears.png",
-  "ISGEC": "/isgec.png",
-  "Dynamic Oil": "/dinamic_oil.jpg",
-  "DurTek": "/durtek.png",
-  "Cordoba Tecnologia em Filtracao": "/cordoba.jpg",
-  "JPMA": "/jpma_logo.png",
-  "Statec Binder": "/statec.png",
-  "Praj Industries": "/praj.png",
-  "Enviropol": "/enviropol.png",
-  "Dínamo Automação Industrial": "/dinamo.png"
-};
-
 const brands: Brand[] = [
   {
     id: "triveni-turbines",
     name: "Triveni Turbines",
-    logo: brandLogos["Triveni Turbines"],
+    logo: "/triveni.png",
     shortDescription: "Soluciones avanzadas de turbinas de vapor de alta eficiencia y confiabilidad para generación de energía y accionamiento mecánico.",
     longDescription: "Con más de 60 años de experiencia y presencia en más de 80 países, Triveni Turbine Limited es un líder global en el diseño y fabricación de turbinas de vapor industriales. Ofrece soluciones personalizadas desde 5 kW hasta 100 MW, optimizando procesos industriales con tecnología de vanguardia y cumplimiento de estándares internacionales.",
     technologies: ["Tecnología de impulso y reacción", "Diseño modular y robusto", "Cumplimiento de estándares API 611 y 612"],
@@ -46,7 +32,7 @@ const brands: Brand[] = [
   {
     id: "triveni-gears",
     name: "Triveni Gears",
-    logo: brandLogos["Triveni Gears"],
+    logo: "/triveni_gears.png",
     shortDescription: "Diseño y fabricación de engranajes y cajas reductoras de alta velocidad y precisión para aplicaciones industriales exigentes.",
     longDescription: "División de transmisión de potencia de Triveni Engineering & Industries Ltd., con más de 90 años de herencia industrial. Fabricamos cajas de engranajes de hasta 50 MW y 40,000 RPM, incorporando tecnología de vanguardia que cumple con las normativas AGMA, ISO, DIN y API para garantizar máxima confiabilidad.",
     technologies: ["Ingeniería de alta velocidad (hasta 40,000 RPM)", "Aceros aleados cementados y rectificados", "Cumplimiento normativo internacional (AGMA, API)"],
@@ -57,7 +43,7 @@ const brands: Brand[] = [
   {
     id: "isgec",
     name: "ISGEC",
-    logo: brandLogos["ISGEC"],
+    logo: "/isgec.png",
     shortDescription: "Soluciones integrales de ingeniería pesada, equipos de proceso, calderas y proyectos EPC a nivel global.",
     longDescription: "ISGEC Heavy Engineering Ltd. cuenta con más de 90 años de experiencia proveyendo soluciones de ingeniería pesada en más de 91 países. Su portafolio abarca desde el diseño y fabricación de equipos de proceso críticos hasta la ejecución de proyectos llave en mano (EPC), manteniendo un compromiso inquebrantable con la excelencia y la innovación.",
     technologies: ["Fabricación avanzada de equipos a presión", "Ingeniería de calderas y recuperación de calor", "Sistemas de control de emisiones (DeNOx, desulfuración)"],
@@ -66,9 +52,9 @@ const brands: Brand[] = [
     applications: ["Sector Energético", "Industria Petroquímica y Refinación", "Industria del Azúcar y Destilerías", "Sector Automotriz y Siderurgia"]
   },
   {
-    id: "dynamic-oil",
-    name: "Dynamic Oil",
-    logo: brandLogos["Dynamic Oil"],
+    id: "dinamic-oil",
+    name: "Dinamic Oil",
+    logo: "/dinamic_oil.jpg",
     shortDescription: "Sistemas de transmisión de potencia y elevación, especializados en reductores planetarios y cabrestantes de alto torque.",
     longDescription: "Fundada en 1970 en Italia, Dinamic Oil es un fabricante global de soluciones de elevación y transmisión de potencia. Con un enfoque de 'pensamiento flexible', diseña reductores y cabrestantes personalizados para aplicaciones móviles, marinas e industriales, respaldados por certificaciones internacionales y una red de soporte mundial.",
     technologies: ["Reductores planetarios de alto torque (hasta 2,500,000 Nm)", "Cabrestantes con motores orbitales o de pistones", "Frenos multidisco negativos"],
@@ -79,7 +65,7 @@ const brands: Brand[] = [
   {
     id: "durtek",
     name: "DurTek",
-    logo: brandLogos["DurTek"],
+    logo: "/durtek.png",
     shortDescription: "Aleaciones resistentes al desgaste y equipos especializados para industrias críticas como minería, energía, azúcar y cemento.",
     longDescription: "Con más de tres décadas de experiencia, DurTek fusiona ciencia de materiales avanzada e ingeniería de precisión para resolver el desgaste prematuro de maquinaria. Sus tecnologías patentadas ofrecen componentes hasta un 50% más duraderos y un 30% más ligeros, garantizando operaciones continuas y sostenibles.",
     technologies: ["Unión por difusión en vacío de cerámica a acero", "Aleaciones con resistencia térmica (-50°C a 1,200°C)", "Sensores IoT integrados para monitoreo predictivo"],
@@ -89,8 +75,8 @@ const brands: Brand[] = [
   },
   {
     id: "cordoba",
-    name: "Cordoba Tecnologia em Filtracao",
-    logo: brandLogos["Cordoba Tecnologia em Filtracao"],
+    name: "Córdoba",
+    logo: "/cordoba.jpg",
     shortDescription: "Soluciones avanzadas de filtración industrial con equipos de alta eficiencia para los sectores azucarero, papelero y tratamiento de aguas.",
     longDescription: "Empresa brasileña dedicada al diseño y fabricación de sistemas de filtración industrial. Córdoba proporciona equipos modulares y duraderos en acero inoxidable que optimizan procesos críticos, garantizando máxima eficiencia, adaptabilidad y un menor consumo de recursos en la separación de fluidos.",
     technologies: ["Succión por vacío y gravedad", "Construcción en acero inoxidable de alta resistencia", "Diseño modular adaptable"],
@@ -101,7 +87,7 @@ const brands: Brand[] = [
   {
     id: "jpma",
     name: "JPMA",
-    logo: brandLogos["JPMA"],
+    logo: "/jpma_logo.png",
     shortDescription: "Consultoría e ingeniería integral para la industria azucarera, destilerías y sistemas de cogeneración.",
     longDescription: "J.P. Mukherji & Associates Pvt. Ltd. (JPMA) es pionero en servicios de consultoría tecnológica desde 1972. Con más de 250 proyectos ejecutados en más de 30 países, JPMA lidera el diseño, optimización y puesta en marcha de plantas azucareras, destilerías de etanol y proyectos de bioenergía, garantizando eficiencia y cumplimiento normativo.",
     technologies: ["Ingeniería básica y de detalle", "Auditorías energéticas avanzadas", "Optimización de procesos industriales"],
@@ -112,7 +98,7 @@ const brands: Brand[] = [
   {
     id: "statec-binder",
     name: "Statec Binder",
-    logo: brandLogos["Statec Binder"],
+    logo: "/statec.png",
     shortDescription: "Especialistas austriacos en sistemas de ensacado y paletizado de alto rendimiento.",
     longDescription: "STATEC BINDER es líder mundial en el envasado de materiales a granel. Con sede en Austria, desarrolla y fabrica máquinas de ensacado y sistemas de paletizado innovadores y de máxima fiabilidad para una amplia variedad de industrias a nivel global.",
     technologies: ["Automatización de alto rendimiento", "Sistemas de pesaje de precisión", "Paletizado robótico y convencional"],
@@ -123,7 +109,7 @@ const brands: Brand[] = [
   {
     id: "praj",
     name: "Praj Industries",
-    logo: brandLogos["Praj Industries"],
+    logo: "/praj.png",
     shortDescription: "Soluciones de ingeniería para bioprocesos y sistemas de cero descarga de líquidos (ZLD).",
     longDescription: "Praj Industries es una empresa global impulsada por la innovación que ofrece soluciones integrales para la bioenergía, la ingeniería de alta pureza y el tratamiento de aguas críticas. Su enfoque en la sostenibilidad permite a las industrias reducir su huella ambiental.",
     technologies: ["Tecnología de fermentación y destilación", "Sistemas ZLD (Zero Liquid Discharge)", "Ingeniería de bioprocesos avanzados"],
@@ -134,7 +120,7 @@ const brands: Brand[] = [
   {
     id: "enviropol",
     name: "Enviropol",
-    logo: brandLogos["Enviropol"],
+    logo: "/enviropol.png",
     shortDescription: "Tecnología avanzada para el control de emisiones y manejo de gases industriales.",
     longDescription: "Enviropol Engineers proporciona soluciones integrales de ingeniería para el control de la contaminación del aire. Diseñan, fabrican e instalan sistemas de alta eficiencia que ayudan a las industrias a cumplir con las regulaciones ambientales más exigentes.",
     technologies: ["Precipitación electrostática", "Filtración de gases de alta temperatura", "Sistemas de desulfuración"],
@@ -144,8 +130,8 @@ const brands: Brand[] = [
   },
   {
     id: "dinamo",
-    name: "Dínamo Automação Industrial",
-    logo: brandLogos["Dínamo Automação Industrial"],
+    name: "Dínamo Automação",
+    logo: "/dinamo.png",
     shortDescription: "Sistemas avanzados de monitoreo y automatización para la industria azucarera.",
     longDescription: "Dínamo Automação Industrial se especializa en el desarrollo de soluciones tecnológicas para el control y monitoreo de procesos industriales. Su enfoque principal es la optimización de la molienda en la industria azucarera mediante sistemas inteligentes.",
     technologies: ["Sensores de precisión para molienda", "Sistemas SCADA y control PLC", "Análisis de datos en tiempo real"],
