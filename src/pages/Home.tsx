@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowRight, CheckCircle2, Factory, Zap, ShieldCheck, ChevronRight, ChevronLeft, Building2, Globe2, Handshake, MapPin } from "lucide-react";
+import { ArrowRight, CheckCircle2, Factory, Zap, ShieldCheck, ChevronRight, ChevronLeft, Building2, Globe2, Handshake, MapPin, Image as ImageIcon } from "lucide-react";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
+import slide1 from "../assets/slide1.jpg";
+import slide2 from "../assets/slide2.webp";
+import slide3 from "../assets/slide3.jpg";
+import slide4 from "../assets/slide4.jpg";
+import slide5 from "../assets/slide5.jpg";
+import takaImg from "../assets/taka.png";
+
 const slides = [
-  "/slide1.jpg",
-  "/slide2.webp",
-  "/slide3.jpg",
-  "/slide4.jpg",
-  "/slide5.jpg"
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5
 ];
 
 export default function Home() {
@@ -57,7 +64,16 @@ export default function Home() {
                 alt={`Industrial background ${currentSlide + 1}`}
                 className="w-full h-full object-cover"
                 loading={currentSlide === 0 ? "eager" : "lazy"}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                  (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
+                  (e.target as HTMLImageElement).nextElementSibling?.classList.add('flex');
+                }}
               />
+              <div className="hidden absolute inset-0 bg-slate-800 items-center justify-center flex-col text-slate-500">
+                <ImageIcon size={48} className="mb-4 opacity-50" />
+                <span className="text-sm font-medium">Imagen no disponible</span>
+              </div>
             </motion.div>
           </AnimatePresence>
           
@@ -217,10 +233,19 @@ export default function Home() {
             >
               <div className="aspect-square md:aspect-[4/3] bg-slate-100 rounded-sm overflow-hidden relative">
                 <img 
-                  src="/taka.png" 
+                  src={takaImg} 
                   alt="Soporte en sitio y consultoría especializada" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = 'none';
+                    (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
+                    (e.target as HTMLImageElement).nextElementSibling?.classList.add('flex');
+                  }}
                 />
+                <div className="hidden absolute inset-0 bg-slate-200 items-center justify-center flex-col text-slate-400">
+                  <ImageIcon size={48} className="mb-4 opacity-50" />
+                  <span className="text-sm font-medium">Imagen no disponible</span>
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent pointer-events-none"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                   <p className="text-white font-medium text-lg drop-shadow-md">Soporte en sitio y consultoría especializada</p>

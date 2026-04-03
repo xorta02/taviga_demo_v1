@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronRight, Settings } from "lucide-react";
 import { cn } from "../lib/utils";
+import tavigaLogo from "../assets/taviga-logo.png";
 
 const navLinks = [
   { name: "Inicio", path: "/" },
@@ -42,8 +43,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <img src="/image (2).png" alt="Taviga Representaciones Industriales" className="h-12 w-auto object-contain" />
+          <Link to="/" className="flex items-center gap-2 group relative">
+            <img 
+              src={tavigaLogo} 
+              alt="Taviga Representaciones Industriales" 
+              className="h-12 w-auto object-contain"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = 'none';
+                (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
+              }}
+            />
+            <span className="hidden text-2xl font-bold text-taviga-blue tracking-tight">TAVIGA</span>
           </Link>
 
           {/* Desktop Nav */}
