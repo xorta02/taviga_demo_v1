@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Taviga Brand Colors */
+  --color-taviga-blue: #3679a4;
+  --color-taviga-blue-hover: #2b6183;
+  
+  --color-taviga-darkblue: #205b9f;
+  --color-taviga-darkblue-hover: #19487e;
+  
+  --color-taviga-green: #3c8a45;
+  --color-taviga-green-hover: #306e37;
+  
+  --color-taviga-orange: #e45922;
+  --color-taviga-orange-hover: #b6471b;
+  --color-taviga-orange-light: #FF8A3D;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased text-slate-900 bg-slate-50;
+  }
+}
+
